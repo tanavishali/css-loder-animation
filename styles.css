@@ -1,0 +1,120 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: white;
+     /* background-color: blueviolet; */
+}
+#img{
+    background-image: url('https://images.unsplash.com/photo-1568092806323-8ec13dfa9b92?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fGxhdyUyMGZpcm18ZW58MHx8MHx8fDA%3D');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
+   background-size: cover;
+   height: 100vh;
+   width: 100vw;
+}
+#navbar {
+    /* Dark teal color for navbar background */
+    height: 60px; /* Reduced height for demonstration */
+    width: 100%;
+    position: fixed;
+    top: 15px;
+    z-index: 1000; /* Ensure the navbar stays on top */
+    
+}
+
+ul {
+    display: flex;
+    background-color: #d5f1a9;
+    opacity: 0.7;
+    justify-content: space-evenly;
+    align-items: center; /* Vertically center the items */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+ul li {
+    border-radius: 3px;
+    /* background-color: #26a69a; Lighter teal color for navbar items */
+    /* padding: 10px; */
+    
+    
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgb(8, 7, 7); /* White text for better contrast */
+    padding: 10px;
+    margin: 0 5px; /* Adjust margin for spacing between links */
+    transition: all;
+    transition-duration: 3s;
+    transition-timing-function: cubic-bezier(.29, 1.01, 1, -0.68);
+  
+}
+
+ul li a:hover {
+    background-color: #070c0c; /* Darker teal color on hover */
+    border-radius: 10px;
+    color: rgb(243, 235, 235);
+    /* padding: 10px; */
+    
+}
+
+ul li.active a {
+    background-color: #004d40; /* Darker teal color for active link */
+    /* Add any additional styling for active link if needed */
+}
+@media screen and (max-width: 400px) {
+    ul {
+        display: block;
+/* border-radius: 4px; */
+    }
+    a{
+        color: white;
+    }
+    li{
+           
+        padding: 50px;
+        display: flex;
+        font-size: 20px;
+        /* background-color: #d5f1a9; */
+        position: relative;
+        top: 30px;
+        justify-content: center;
+    }
+    #navbar{
+        
+       display: block;
+        height: 0px;
+        color: white;
+    } 
+
+}
+
+.box {
+    margin: 30px 0px 30px 30px;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 5px solid green;
+    border-right : 5px solid red ;
+    background-color: aqua;
+    
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+    animation: all 1s ease-in 0s infinite normal;
+}
+@keyframes all{
+    from{
+        /* background-color: green; */
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
